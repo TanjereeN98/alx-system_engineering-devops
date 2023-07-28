@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Displays from 0 to 12 in minutes
+count=1
+i=1
+Hour=0
+while [ $count -le 13 ]
+do
+	echo "Hour: $Hour"
+	while [ $i -lt 60 ]
+	do
+		echo "$i"
+		i=$(( i+1 ))
+	done
+	if [ $i -eq 60 ]
+	then
+		Hour=$(( Hour+1 ))
+		i=1
+		count=$(( count+1 ))
+	fi
+done
