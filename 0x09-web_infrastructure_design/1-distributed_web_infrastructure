@@ -1,0 +1,9 @@
+https://imgur.com/a/nBHRrgM
+
+Added extra Server to avoid SPOF and to obtain better performance in general to the requesting clients, also made the load lower on each server since I'm using an Active-Active algorithm
+
+the primary node is responsible for handling write operations and maintaining the authoritative copy of the data, ensuring data consistency and integrity. The replica nodes are used to offload read operations from the primary node, improving read performance and scalability for read-intensive workloads. Applications need to be designed in a way that takes into account the differences in data availability and consistency between the primary and replica nodes.
+
+Issue with this setup:
+        1.Security issues (no firewall, no HTTPS)
+        2.No monitoring.
