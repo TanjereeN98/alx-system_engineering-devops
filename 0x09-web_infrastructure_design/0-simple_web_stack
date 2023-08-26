@@ -1,0 +1,24 @@
+https://imgur.com/a/YCbDun7
+
+1- What is a server: a server is a device or software that run applications, store data and provides services to other computes connected to it over a network.
+-------------------------------------------------------------------------------------------------------------------
+2- What is the role of the domain name: domain names are human read-able text that help internet users to access websites or services without having to remember their long ip addresses.
+-------------------------------------------------------------------------------------------------------------------
+3- What type of DNS record www is in www.foobar.com: the www record is a subdomain and called CNAME record. it points to the server's IP Address.
+-------------------------------------------------------------------------------------------------------------------
+4- What is the role of the web server: handling the client requests and serve them the appropiate webpages within responses, just as our Nginx here.
+-------------------------------------------------------------------------------------------------------------------
+5- What is the role of the application server: it's responsible for the processing of the dynamic content of the website, it executes codes (PHP for example) to retrive/update/delete data from the database, then the processed content is sent to web server to be delivered to the user.
+-------------------------------------------------------------------------------------------------------------------
+6- What is the role of the database: storing and managing a collection of the website's data.
+-------------------------------------------------------------------------------------------------------------------
+7- What is the server using to communicate with the computer of the user requesting the website: Using a communication protocol called HTTP or HTTPS.
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+## issue with this infrastructure:
+
+ * SPOF: single point of failure, since we have one server, the entire website might become inaccessible if that server goes down.
+-------------------------------------------------------------------------------------------------------------------
+ * Downtime when maintenance needed: when deploying new code, we must restart the web server which will cause a downtime for the end users.
+-------------------------------------------------------------------------------------------------------------------
+ * Limited Scalability: since we have only one server, we can't handle big increase in trrafic before adding more resources.
