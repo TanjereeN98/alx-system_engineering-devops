@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# added Hello Holberton to /var/www/html/index.html file
+
+service apache2 start
