@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# script that installs nginx server
-
-sudo apt-get -y update;
-sudo apt-get -y install nginx;
-sudo ufw allow 'Nginx HTTP';
-sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html';
-sudo service nginx start;
+# configures nginx on new Ubuntu machine
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo rm -f /var/www/html/*
+echo "Hello World!" > hello_world.html
+sudo mv hello_world.html /var/www/html/
+sudo sed -i "s/^[[:space:]]*index.*/\tindex hello_world.html/g" /etc/nginx/sites-available/default
+sudo service nginx restart
