@@ -6,4 +6,5 @@ sudo rm -f /var/www/html/*
 echo "Hello World!" > hello_world.html
 sudo mv hello_world.html /var/www/html/
 sudo sed -i "s/^[[:space:]]*index.*/\tindex hello_world.html/g" /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx stop;
+sudo service nginx start;
