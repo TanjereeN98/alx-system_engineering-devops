@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Nginx likes port 80
+
+sudo apt-get updates -y
+sudo apt-get install nginx -y
+sudo apt install ufw -y
+sudo ufw allow 'Nginx HTTP'
+service nginx start
