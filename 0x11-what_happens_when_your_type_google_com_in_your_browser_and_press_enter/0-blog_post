@@ -1,0 +1,31 @@
+What Happens When You Type https://www.google.com in Your Browser and Press Enter?
+When you type https://www.google.com in your browser and press Enter, a complex series of events takes place behind the scenes. Let's break down the main steps involved in this process:
+
+1. DNS Request
+The first step is to resolve the human-readable domain name www.google.com into an IP address. This is done through a DNS (Domain Name System) request. The browser queries DNS servers to find the IP address associated with www.google.com.
+
+2. TCP/IP Connection
+Once the IP address is obtained, the browser initiates a connection to the server using the TCP/IP protocol. This ensures reliable communication between your browser and Google's server.
+
+3. Firewall
+As the connection request reaches Google's infrastructure, it first passes through a firewall. Firewalls are security systems that monitor and control incoming and outgoing network traffic based on predetermined security rules, protecting the servers from malicious traffic.
+
+4. HTTPS/SSL
+Because the URL uses HTTPS, the connection is encrypted using SSL/TLS (Secure Sockets Layer/Transport Layer Security). This ensures that the data transmitted between your browser and the server is secure and cannot be intercepted by third parties.
+
+5. Load Balancer
+The request then reaches Google's load balancer. A load balancer distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving the overall reliability and performance of the service.
+
+6. Web Server
+The load balancer forwards the request to one of Google's web servers. The web server is responsible for handling HTTP requests, processing them, and serving static content like HTML, CSS, and JavaScript files.
+
+7. Application Server
+For dynamic content, the web server forwards the request to an application server. The application server runs server-side code (often involving complex business logic) to generate dynamic responses tailored to the user's request.
+
+8. Database
+If the request requires data storage or retrieval, the application server interacts with a database. The database stores and manages data, allowing the application server to query, update, and return data as needed to construct the final response.
+
+Conclusion
+Once the web server, application server, and database have done their jobs, the generated response (often an HTML page) is sent back through the same path, passing through the load balancer and firewall, over the encrypted HTTPS connection, and finally arriving at your browser. The browser then renders the page, displaying Google's homepage or search results.
+
+The next time you type a URL and press Enter, you'll know the fascinating sequence of steps that work seamlessly to bring the webpage to your screen.
