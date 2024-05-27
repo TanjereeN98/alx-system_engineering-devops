@@ -1,0 +1,43 @@
++--------------+
+|   Browser    |
++------+-------+
+       |
+       | 1. DNS Request
+       v
++------+-------+
+|     DNS      |
++------+-------+
+       |
+       | 2. IP Address Resolution
+       v
++------+-------+       3. TCP/IP Connection
+|  Google      |<---------------------+
+|  Firewall    |                      |
++------+-------+                      |
+       |                              |
+       | 4. Encrypted HTTPS Traffic   |
+       v                              |
++------+-------+                      |
+|  Load        |                      |
+|  Balancer    |                      |
++------+-------+                      |
+       |                              |
+       | 5. Request Distribution      |
+       v                              |
++------+-------+                      |
+|  Web Server  |                      |
++------+-------+                      |
+       |                              |
+       | 6. Serve Static Content      |
+       v                              |
++------+-------+                      |
+|  Application |                      |
+|  Server      |                      |
++------+-------+                      |
+       |                              |
+       | 7. Dynamic Content Generation|
+       v                              |
++------+-------+                      |
+|  Database    |<---------------------+
++--------------+
+
