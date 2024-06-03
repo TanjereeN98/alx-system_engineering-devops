@@ -22,4 +22,4 @@ if __name__ == '__main__':
         print(
             f"Employee {data['name']} is done with tasks"
             f"({len(completed_tasks)}/{tasks_number}):")
-        print('\n'.join('\t' + task for task in completed_tasks))
+        print('\n'.join('\t ' + task for task in completed_tasks))
