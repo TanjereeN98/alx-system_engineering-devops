@@ -17,7 +17,7 @@ if __name__ == '__main__':
         tasks = tasks.json()
         user_name = data['username']
         with open(f'{user_id}.json', 'w', newline='') as file:
-            json.dump({f'{user_id}': [
+            json.dump({f"{user_id}": [
                 {
                     "task": f"{task['title']}",
                     "completed": task.get("completed"),
