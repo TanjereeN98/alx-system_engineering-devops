@@ -6,6 +6,7 @@ import requests
 import sys
 
 if __name__ == '__main__':
+
     user_id = sys.argv[1]
     response = requests.get(
         f'https://jsonplaceholder.typicode.com/users/{user_id}')
@@ -15,7 +16,7 @@ if __name__ == '__main__':
         data = response.json()
         tasks = tasks.json()
         user_name = data['username']
-        with open(f'{sys.argv[1]}.json', 'w', newline='') as file:
+        with open(f'{user_id}.json', 'w', newline='') as file:
             json.dump({f'{user_id}': [
                 {
                     "task": f"{task['title']}",
